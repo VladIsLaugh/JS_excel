@@ -1,6 +1,11 @@
 import './scss/index.scss'
-import {} from '@/components/excel';
+import { Header } from './components/header/Header';
+import { Toolbar } from './components/toolbar/Toolbar';
+import { Formula } from './components/formula/Formula';
+import { Table } from './components/table/Table';
+import {Excel} from '@/components/excel/Excel';
 const excel = new Excel('#app',{
-    components: [] 
+    components: [Header, Toolbar, Formula, Table] 
 })  
-console.log(excel);
+
+excel.render()
